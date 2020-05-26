@@ -83,10 +83,16 @@ footer {
 @media (max-width: 1028px) {
   h1 {
     font-size: 2rem;
-    text-shadow: 1px 0 #DA0463;
+    text-shadow: 2px 0 #DA0463;
   }
+  
   .drum-img {
     height: 60px;
     width: 60px;
+  }
+  
+  .drum {
+  width: 100px;
+  height: 100px;
   }
 }

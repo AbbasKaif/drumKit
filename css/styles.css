@@ -85,4 +85,8 @@ footer {
     font-size: 2rem;
     text-shadow: 1px 0 #DA0463;
   }
+  .drum-img {
+    height: 60px;
+    width: 60px;
+  }
 }

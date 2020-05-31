@@ -8,15 +8,19 @@ for (var i = 0; i < document.querySelectorAll(".drum").length; i++) {
   document.querySelectorAll("button")[i].addEventListener("click", function() {
     var buttonInnerHtml = this.innerHTML;
     makeSound(buttonInnerHtml);
+    buttonAnimation(buttonInnerHtml);
   });
 }
 
 /* Detecting Keyboard Press */
+
 document.addEventListener("keydown", function(event) {
   makeSound(event.key);
+  buttonAnimation(event.key);
 });
 
 /* Function for playing sound */
+
 function makeSound(key) {
   switch (key) {
     case "w":
@@ -51,6 +55,18 @@ function makeSound(key) {
       console.log(buttonInnerHtml);
   }
 }
+
+/* Animation of Button */
+
+function buttonAnimation(currentKey) {
+  var activeButton = document.querySelector("."+currentKey);
+  activeButton.classList.add("pressed");
+
+  setTimeout(function () {
+    activeButton.classList.remove("pressed");
+  }, 100);
+}
+
 
 /* document.querySelector("button").addEventListener("click", handleClick);
 function handleClick() {
